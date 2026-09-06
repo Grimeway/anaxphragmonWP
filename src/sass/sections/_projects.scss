@@ -4,14 +4,13 @@
   margin-top: -10rem;
   padding-top: 15rem;
 
-
   @include respond(tab-land) {
     margin-top: 0;
     padding-top: 5rem;
   }
 
   .project-wrapper {
-    margin-bottom: 15rem;
+    margin-bottom: 8rem;
 
     @include respond(phone) {
       margin-bottom: 0rem;
@@ -77,21 +76,29 @@
   }
 }
 
-#slider {
+.slider {
   overflow: hidden;
 }
 
-#slider figure {
+.slider-track {
+  display: flex;
   position: relative;
   width: 500%;
   margin: 0;
   left: 0;
-  animation: 20s slider infinite;
+  animation: 32s slider infinite;
 }
 
-#slider figure img {
-  float: left;
+.slider-track img {
+  flex: 0 0 20%;
   width: 20%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.slider:hover .slider-track,
+.slider:focus-within .slider-track {
+  animation-play-state: paused;
 }
 
 @keyframes slider {

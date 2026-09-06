@@ -41,17 +41,17 @@
       height: 100%;
       justify-content: center;
       flex-direction: column;
-      padding-bottom: 100px;
-      padding-right: 50px;
+      padding: 0 1.6rem;
+      max-width: 60ch;
 
       @include respond(tab-port-sm) {
         align-items: center;
-        padding-right: 0;
+        padding: 0;
       }
 
       &-text {
         text-align: left;
-        font-size: x-large;
+        font-size: 2rem;
 
         @include respond(tab-port) {
           text-align: left;

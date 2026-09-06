@@ -1,11 +1,36 @@
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid $dark-blue-text;
+  outline-offset: 5px;
+  box-shadow: 0 0 0 5px $white-color;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* Scrollbar */
